@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AdaptIQ - AI-Powered Adaptive Learning</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            Adapt<span>IQ</span>
+        </div>
+
+        <nav>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#features">Features</a>
+            <a href="#">Sign In</a>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- ================= HERO ================= -->
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <p class="small-title">
+                    AI-POWERED ADAPTIVE LEARNING
+                </p>
+
+                <h1>
+                    Learning That
+                    <span>Adapts To You.</span>
+                </h1>
+
+                <p class="hero-description">
+                    AdaptIQ understands your strengths and weaknesses
+                    and creates a personalized learning experience
+                    designed around you.
+                </p>
+
+                <button
+                    class="primary-btn"
+                    id="start-learning-btn">
+                    Start Learning →
+                </button>
+
+            </div>
+
+
+            <!-- Dashboard Preview -->
+
+            <div class="dashboard-card">
+
+                <div class="card-header">
+
+                    <div>
+                        <p class="card-label">
+                            YOUR PROGRESS
+                        </p>
+
+                        <h2>
+                            Learning Overview
+                        </h2>
+                    </div>
+
+                    <div class="profile-circle">
+                        P
+                    </div>
+
+                </div>
+
+
+                <div class="progress-section">
+
+                    <div class="progress-info">
+                        <span>Overall Progress</span>
+                        <strong>78%</strong>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="topic-container">
+
+                    <div class="topic">
+
+                        <span>✓</span>
+
+                        <div>
+                            <small>Strong Topic</small>
+                            <p>JavaScript Loops</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="topic">
+
+                        <span>!</span>
+
+                        <div>
+                            <small>Needs Practice</small>
+                            <p>JavaScript Arrays</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= HOW IT WORKS ================= -->
+
+        <section
+            id="how-it-works"
+            class="how-section">
+
+            <div class="section-heading">
+
+                <p class="small-title">
+                    HOW IT WORKS
+                </p>
+
+                <h2>
+                    Your learning journey,
+                    <span>personalized.</span>
+                </h2>
+
+            </div>
+
+
+            <div class="steps">
+
+                <div class="step-card">
+
+                    <div class="step-number">
+                        01
+                    </div>
+
+                    <h3>Assess</h3>
+
+                    <p>
+                        Take a short assessment to understand
+                        your current knowledge level.
+                    </p>
+
+                </div>
+
+
+                <div class="step-card">
+
+                    <div class="step-number">
+                        02
+                    </div>
+
+                    <h3>Analyze</h3>
+
+                    <p>
+                        AdaptIQ analyzes your answers and
+                        identifies your strengths and weak areas.
+                    </p>
+
+                </div>
+
+
+                <div class="step-card">
+
+                    <div class="step-number">
+                        03
+                    </div>
+
+                    <h3>Adapt</h3>
+
+                    <p>
+                        Your next questions and learning
+                        recommendations adapt to your performance.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PROFILE ================= -->
+
+        <section
+            id="profile-section"
+            class="profile-section hidden">
+
+            <div class="profile-container">
+
+                <div class="profile-heading">
+
+                    <p class="small-title">
+                        LET'S GET STARTED
+                    </p>
+
+                    <h2>
+                        Tell us about yourself
+                    </h2>
+
+                    <p>
+                        We'll use your information to personalize
+                        your learning experience.
+                    </p>
+
+                </div>
+
+
+                <form id="profile-form">
+
+                    <div class="form-group">
+
+                        <label for="student-name">
+                            Your Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="student-name"
+                            placeholder="Enter your name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="subject">
+                            Choose a Subject
+                        </label>
+
+                        <select
+                            id="subject"
+                            required>
+
+                            <option value="">
+                                Select a subject
+                            </option>
+
+                            <option value="javascript">
+                                JavaScript
+                            </option>
+
+                            <option value="python">
+                                Python
+                            </option>
+
+                            <option value="java">
+                                Java
+                            </option>
+
+                            <option value="html-css">
+                                HTML & CSS
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="goal">
+                            Your Learning Goal
+                        </label>
+
+                        <select
+                            id="goal"
+                            required>
+
+                            <option value="">
+                                Select your goal
+                            </option>
+
+                            <option value="beginner">
+                                Build strong basics
+                            </option>
+
+                            <option value="intermediate">
+                                Improve my skills
+                            </option>
+
+                            <option value="advanced">
+                                Prepare for advanced topics
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="primary-btn">
+
+                        Start Assessment →
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ASSESSMENT ================= -->
+
+        <section
+            id="assessment-section"
+            class="assessment-section hidden">
+
+            <div class="assessment-container">
+
+                <div class="assessment-header">
+
+                    <div>
+
+                        <p class="small-title">
+                            INITIAL ASSESSMENT
+                        </p>
+
+                        <h2>
+                            Let's understand what you know.
+                        </h2>
+
+                    </div>
+
+
+                    <div class="question-counter">
+
+                        Question
+                        <span id="question-number">1</span>
+                        of
+                        <span id="total-questions">5</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="assessment-progress">
+
+                    <div id="assessment-progress-fill"></div>
+
+                </div>
+
+
+                <div class="question-card">
+
+                    <p
+                        class="question-topic"
+                        id="question-topic">
+                        JavaScript
+                    </p>
+
+
+                    <h3 id="question-text">
+                        Question will appear here
+                    </h3>
+
+
+                    <div id="options-container"></div>
+
+
+                    <button
+                        type="button"
+                        id="next-question-btn"
+                        class="primary-btn">
+
+                        Next Question →
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= RESULTS ================= -->
+
+        <section
+            id="results-section"
+            class="results-section hidden">
+
+            <div class="results-container">
+
+                <div class="results-header">
+
+                    <p class="small-title">
+                        ASSESSMENT COMPLETE
+                    </p>
+
+                    <h2>
+                        Your Learning Analysis
+                    </h2>
+
+                    <p>
+                        We've analyzed your answers to understand
+                        your strengths and areas for improvement.
+                    </p>
+
+                </div>
+
+
+                <!-- Score -->
+
+                <div class="score-card">
+
+                    <div class="score-circle">
+
+                        <span id="score-value">
+                            0
+                        </span>
+
+                        <small>%</small>
+
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+                            Your Score
+                        </h3>
+
+                        <p id="score-text">
+                            0 out of 5 correct
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Strong / Weak Topics -->
+
+                <div class="topic-results">
+
+                    <div class="result-card">
+
+                        <h3>
+                            💪 Strong Topics
+                        </h3>
+
+                        <div id="strong-topics">
+                        </div>
+
+                    </div>
+
+
+                    <div class="result-card">
+
+                        <h3>
+                            📚 Topics to Improve
+                        </h3>
+
+                        <div id="weak-topics">
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Personalized Recommendation -->
+
+                <div class="recommendation-card">
+
+                    <p class="small-title">
+                        PERSONALIZED RECOMMENDATION
+                    </p>
+
+
+                    <h3 id="recommendation-title">
+                        Your learning path is ready.
+                    </h3>
+
+
+                    <p id="recommendation-text">
+                        We'll create a learning path based on
+                        your performance.
+                    </p>
+
+
+                    <div class="recommendation-details">
+
+
+                        <div class="recommendation-item">
+
+                            <span class="recommendation-icon">
+                                🎯
+                            </span>
+
+                            <div>
+
+                                <h4>
+                                    Focus Areas
+                                </h4>
+
+                                <p id="focus-area-text">
+                                    Your weaker topics will
+                                    receive more practice.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="recommendation-item">
+
+                            <span class="recommendation-icon">
+                                📈
+                            </span>
+
+                            <div>
+
+                                <h4>
+                                    Learning Strategy
+                                </h4>
+
+                                <p id="learning-strategy-text">
+                                    Practice concepts step by
+                                    step before moving to
+                                    harder questions.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="recommendation-item">
+
+                            <span class="recommendation-icon">
+                                🚀
+                            </span>
+
+                            <div>
+
+                                <h4>
+                                    Next Step
+                                </h4>
+
+                                <p id="next-step-text">
+                                    Continue learning with
+                                    personalized questions.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Recommended Topics -->
+
+                    <div class="recommended-topics">
+
+                        <h4>
+                            Recommended Topics
+                        </h4>
+
+                        <div id="recommended-topics"></div>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="primary-btn"
+                        id="continue-learning-btn">
+
+                        Continue Learning →
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PERSONALIZED LEARNING ================= -->
+
+        <section
+            id="learning-section"
+            class="learning-section hidden">
+
+            <div class="learning-container">
+
+
+                <div class="learning-header">
+
+                    <p class="small-title">
+                        PERSONALIZED PRACTICE
+                    </p>
+
+                    <h2>
+                        Let's improve your skills.
+                    </h2>
+
+                    <p>
+                        We've selected questions based on
+                        your assessment results.
+                    </p>
+
+                </div>
+
+
+                <!-- Learning Information -->
+
+                <div class="learning-info">
+
+
+                    <div class="learning-info-card">
+
+                        <span>🎯</span>
+
+                        <div>
+
+                            <h3>
+                                Focus Area
+                            </h3>
+
+                            <p id="learning-focus">
+                                Your weak topics
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="learning-info-card">
+
+                        <span>📊</span>
+
+                        <div>
+
+                            <h3>
+                                Practice Progress
+                            </h3>
+
+                            <p>
+
+                                Question
+
+                                <span id="learning-question-number">
+                                    1
+                                </span>
+
+                                of
+
+                                <span id="learning-total-questions">
+                                    5
+                                </span>
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Learning Progress -->
+
+                <div class="learning-progress">
+
+                    <div id="learning-progress-fill"></div>
+
+                </div>
+
+
+                <!-- Learning Question -->
+
+                <div class="learning-question-card">
+
+                    <p
+                        class="question-topic"
+                        id="learning-question-topic">
+
+                        Arrays
+
+                    </p>
+
+
+                    <h3 id="learning-question-text">
+                        Question will appear here
+                    </h3>
+
+
+                    <div
+                        id="learning-options-container">
+                    </div>
+
+
+                    <button
+                        type="button"
+                        id="learning-next-btn"
+                        class="primary-btn">
+
+                        Next Question →
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
