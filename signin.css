@@ -1,0 +1,316 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(
+        135deg,
+        #eef2ff,
+        #f8f9ff
+    );
+}
+
+
+/* ================= LOGIN CONTAINER ================= */
+
+.login-container {
+
+    width: 100%;
+    max-width: 420px;
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+
+/* ================= TITLE ================= */
+
+.login-container h1 {
+
+    text-align: center;
+
+    font-size: 32px;
+
+    margin-bottom: 10px;
+
+    color: rgb(50,52,58);
+}
+
+
+.register-text {
+
+    text-align: center;
+
+    color: #666;
+
+    margin-bottom: 28px;
+
+    font-size: 14px;
+}
+
+
+.register-text a {
+
+    color: #5b5bd6;
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+
+.register-text a:hover {
+
+    text-decoration: underline;
+}
+
+
+/* ================= GOOGLE BUTTON ================= */
+
+.google-btn {
+
+    width: 100%;
+
+    height: 48px;
+
+    background: white;
+
+    border: 1px solid #d5d5d5;
+
+    border-radius: 6px;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+}
+
+
+.google-btn:hover {
+
+    background: #f7f7f7;
+}
+
+
+.google-icon {
+
+    font-size: 20px;
+    border-radius: 50px;
+
+     background: linear-gradient(
+        45deg,
+        #4285F4,
+        #EA4335,
+        #FBBC05,
+        #34A853
+    );
+}
+
+
+/* ================= DIVIDER ================= */
+
+.divider {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin: 25px 0;
+
+    color: #888;
+
+    font-size: 14px;
+}
+
+
+.divider::before,
+.divider::after {
+
+    content: "";
+
+    flex: 1;
+
+    height: 1px;
+
+    background: #ddd;
+}
+
+
+/* ================= INPUTS ================= */
+
+.input-group {
+
+    margin-bottom: 20px;
+}
+
+
+.input-group label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    color: #333;
+}
+
+
+.input-group input {
+
+    width: 100%;
+
+    height: 48px;
+
+    padding: 0 14px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+
+.input-group input:focus {
+
+    border-color: #5b5bd6;
+
+    box-shadow: 0 0 0 2px rgba(91, 91, 214, 0.1);
+}
+
+
+/* ================= FORGOT PASSWORD ================= */
+
+.forgot-password {
+
+    text-align: right;
+
+    margin-top: -8px;
+
+    margin-bottom: 22px;
+}
+
+
+.forgot-password a {
+
+    color: #5b5bd6;
+
+    font-size: 14px;
+
+    text-decoration: none;
+}
+
+
+.forgot-password a:hover {
+
+    text-decoration: underline;
+}
+
+
+/* ================= SIGN IN BUTTON ================= */
+
+.signin-btn {
+
+    width: 100%;
+
+    height: 48px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #4848bd;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.signin-btn:hover {
+
+    background: #4848bd;
+}
+
+
+/* ================= TERMS ================= */
+
+.terms {
+
+    margin-top: 25px;
+
+    text-align: center;
+
+    color: #777;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+
+.terms a {
+
+    color: #5b5bd6;
+
+    text-decoration: none;
+}
+
+
+.terms a:hover {
+
+    text-decoration: underline;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 500px) {
+
+    .login-container {
+
+        margin: 20px;
+
+        padding: 30px 25px;
+    }
+
+}

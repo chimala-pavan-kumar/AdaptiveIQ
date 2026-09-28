@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Personalized Learning - AdaptIQ</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            Adapt<span>IQ</span>
+        </div>
+
+        <nav>
+
+            <a href="index.html">Home</a>
+
+            <a href="about.html">About</a>
+
+            <div class="dropdown">
+
+                <a href="#">Courses</a>
+
+                <div class="dropdown-menu">
+
+                    <a href="javascript.html">JavaScript Basics</a>
+                    <a href="html.html">HTML</a>
+                    <a href="css.html">CSS</a>
+
+                </div>
+
+            </div>
+
+         
+
+            <a href="signin.html">Sign In</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Main Learning Area -->
+
+    <main class="learning-container">
+
+
+        <!-- Page Heading -->
+
+        <section class="learning-header">
+
+            <h1>Personalized Learning</h1>
+
+            <p>
+                Learn the concepts that need more practice
+                based on your assessment results.
+            </p>
+
+        </section>
+
+
+        <!-- Progress -->
+
+        <section class="learning-progress">
+
+            <p id="progressText">
+                Topic 1 of 1
+            </p>
+
+            <div class="progress-bar">
+
+                <div
+                    id="progressFill"
+                    class="progress-fill">
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Learning Content -->
+
+        <section id="learningContent">
+
+        </section>
+
+
+        <!-- Navigation Buttons -->
+
+        <div class="learning-navigation">
+
+            <button
+                id="previousBtn"
+                class="learning-btn secondary-btn"
+                onclick="previousTopic()">
+
+                Previous
+
+            </button>
+
+
+            <button
+                id="nextBtn"
+                class="learning-btn primary-btn"
+                onclick="nextTopic()">
+
+                Next Concept
+
+            </button>
+
+        </div>
+
+
+        <!-- Completed Section -->
+
+        <section
+            id="finishSection"
+            class="finish-section">
+
+            <h2>Learning Completed</h2>
+
+            <p>
+                You have completed all the recommended
+                learning topics.
+            </p>
+
+
+            <div class="finish-buttons">
+
+                <button
+                    class="learning-btn primary-btn"
+                    onclick="goToTest()">
+
+                    Take Assessment Again
+
+                </button>
+
+
+                <button
+                    class="learning-btn secondary-btn"
+                    onclick="goToCourse()">
+
+                    Back to Course
+
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="learning.js"></script>
+
+</body>
+
+</html>

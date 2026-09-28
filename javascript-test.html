@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript Assessment - AdaptIQ</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            Adapt<span>IQ</span>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+
+            <div class="dropdown">
+
+                <a href="#">Courses ▼</a>
+
+                <div class="dropdown-menu">
+                    <a href="javascript.html">JavaScript Basics</a>
+                    <a href="html.html">HTML</a>
+                    <a href="css.html">CSS</a>
+                </div>
+
+            </div>
+
+            <a href="signin.html">Sign In</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= TEST ================= -->
+
+    <main class="test-container">
+
+        <!-- Test Header -->
+
+        <div class="test-top">
+
+            <div>
+                <h1>JavaScript Assessment</h1>
+
+                <p>
+                    Answer all questions carefully.
+                </p>
+            </div>
+
+            <div class="test-info">
+
+                <div>
+                    <span>Questions</span>
+                    <strong>15</strong>
+                </div>
+
+                <div>
+                    <span>Marks</span>
+                    <strong>30</strong>
+                </div>
+
+                <div class="timer-box">
+                    <span>Time Left</span>
+                    <strong id="timer">20:00</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Questions -->
+
+        <form id="testForm">
+
+
+            <!-- Question 1 -->
+
+            <div class="question-card">
+
+                <h3>1. Which keyword is used to declare a variable in JavaScript?</h3>
+
+                <label>
+                    <input type="radio" name="q1" value="var">
+                    var
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="define">
+                    define
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="variable">
+                    variable
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="int">
+                    int
+                </label>
+
+            </div>
+
+
+            <!-- Question 2 -->
+
+            <div class="question-card">
+
+                <h3>2. Which symbol is used for a single-line comment?</h3>
+
+                <label>
+                    <input type="radio" name="q2" value="//">
+                    //
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="/*">
+                    /*
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="#">
+                    #
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="<!--">
+                    &lt;!--
+                </label>
+
+            </div>
+
+
+            <!-- Question 3 -->
+
+            <div class="question-card">
+
+                <h3>3. Which data type stores true or false?</h3>
+
+                <label>
+                    <input type="radio" name="q3" value="String">
+                    String
+                </label>
+
+                <label>
+                    <input type="radio" name="q3" value="Boolean">
+                    Boolean
+                </label>
+
+                <label>
+                    <input type="radio" name="q3" value="Number">
+                    Number
+                </label>
+
+                <label>
+                    <input type="radio" name="q3" value="Object">
+                    Object
+                </label>
+
+            </div>
+
+
+            <!-- Question 4 -->
+
+            <div class="question-card">
+
+                <h3>4. Which operator is used for strict equality?</h3>
+
+                <label>
+                    <input type="radio" name="q4" value="=">
+                    =
+                </label>
+
+                <label>
+                    <input type="radio" name="q4" value="==">
+                    ==
+                </label>
+
+                <label>
+                    <input type="radio" name="q4" value="===">
+                    ===
+                </label>
+
+                <label>
+                    <input type="radio" name="q4" value="!=">
+                    !=
+                </label>
+
+            </div>
+
+
+            <!-- Question 5 -->
+
+            <div class="question-card">
+
+                <h3>5. Which method adds an element to the end of an array?</h3>
+
+                <label>
+                    <input type="radio" name="q5" value="push">
+                    push()
+                </label>
+
+                <label>
+                    <input type="radio" name="q5" value="add">
+                    add()
+                </label>
+
+                <label>
+                    <input type="radio" name="q5" value="append">
+                    append()
+                </label>
+
+                <label>
+                    <input type="radio" name="q5" value="insert">
+                    insert()
+                </label>
+
+            </div>
+
+
+            <!-- Question 6 -->
+
+            <div class="question-card">
+
+                <h3>6. Which keyword is used to define a function?</h3>
+
+                <label>
+                    <input type="radio" name="q6" value="function">
+                    function
+                </label>
+
+                <label>
+                    <input type="radio" name="q6" value="def">
+                    def
+                </label>
+
+                <label>
+                    <input type="radio" name="q6" value="fun">
+                    fun
+                </label>
+
+                <label>
+                    <input type="radio" name="q6" value="method">
+                    method
+                </label>
+
+            </div>
+
+
+            <!-- Question 7 -->
+
+            <div class="question-card">
+
+                <h3>7. Which method converts JSON text into a JavaScript object?</h3>
+
+                <label>
+                    <input type="radio" name="q7" value="JSON.parse">
+                    JSON.parse()
+                </label>
+
+                <label>
+                    <input type="radio" name="q7" value="JSON.stringify">
+                    JSON.stringify()
+                </label>
+
+                <label>
+                    <input type="radio" name="q7" value="JSON.convert">
+                    JSON.convert()
+                </label>
+
+                <label>
+                    <input type="radio" name="q7" value="JSON.object">
+                    JSON.object()
+                </label>
+
+            </div>
+
+
+            <!-- Question 8 -->
+
+            <div class="question-card">
+
+                <h3>8. Which keyword creates a block-scoped variable?</h3>
+
+                <label>
+                    <input type="radio" name="q8" value="var">
+                    var
+                </label>
+
+                <label>
+                    <input type="radio" name="q8" value="let">
+                    let
+                </label>
+
+                <label>
+                    <input type="radio" name="q8" value="define">
+                    define
+                </label>
+
+                <label>
+                    <input type="radio" name="q8" value="variable">
+                    variable
+                </label>
+
+            </div>
+
+
+            <!-- Question 9 -->
+
+            <div class="question-card">
+
+                <h3>9. Which method removes the last element from an array?</h3>
+
+                <label>
+                    <input type="radio" name="q9" value="remove">
+                    remove()
+                </label>
+
+                <label>
+                    <input type="radio" name="q9" value="delete">
+                    delete()
+                </label>
+
+                <label>
+                    <input type="radio" name="q9" value="pop">
+                    pop()
+                </label>
+
+                <label>
+                    <input type="radio" name="q9" value="last">
+                    last()
+                </label>
+
+            </div>
+
+
+            <!-- Question 10 -->
+
+            <div class="question-card">
+
+                <h3>10. Which object represents the HTML document?</h3>
+
+                <label>
+                    <input type="radio" name="q10" value="window">
+                    window
+                </label>
+
+                <label>
+                    <input type="radio" name="q10" value="document">
+                    document
+                </label>
+
+                <label>
+                    <input type="radio" name="q10" value="html">
+                    html
+                </label>
+
+                <label>
+                    <input type="radio" name="q10" value="page">
+                    page
+                </label>
+
+            </div>
+
+
+            <!-- Question 11 -->
+
+            <div class="question-card">
+
+                <h3>11. Which function prints a message in the browser console?</h3>
+
+                <label>
+                    <input type="radio" name="q11" value="print">
+                    print()
+                </label>
+
+                <label>
+                    <input type="radio" name="q11" value="console.log">
+                    console.log()
+                </label>
+
+                <label>
+                    <input type="radio" name="q11" value="display">
+                    display()
+                </label>
+
+                <label>
+                    <input type="radio" name="q11" value="show">
+                    show()
+                </label>
+
+            </div>
+
+
+            <!-- Question 12 -->
+
+            <div class="question-card">
+
+                <h3>12. Which loop is commonly used to iterate over an array?</h3>
+
+                <label>
+                    <input type="radio" name="q12" value="for">
+                    for
+                </label>
+
+                <label>
+                    <input type="radio" name="q12" value="if">
+                    if
+                </label>
+
+                <label>
+                    <input type="radio" name="q12" value="switch">
+                    switch
+                </label>
+
+                <label>
+                    <input type="radio" name="q12" value="try">
+                    try
+                </label>
+
+            </div>
+
+
+            <!-- Question 13 -->
+
+            <div class="question-card">
+
+                <h3>13. Which keyword returns a value from a function?</h3>
+
+                <label>
+                    <input type="radio" name="q13" value="return">
+                    return
+                </label>
+
+                <label>
+                    <input type="radio" name="q13" value="send">
+                    send
+                </label>
+
+                <label>
+                    <input type="radio" name="q13" value="output">
+                    output
+                </label>
+
+                <label>
+                    <input type="radio" name="q13" value="value">
+                    value
+                </label>
+
+            </div>
+
+
+            <!-- Question 14 -->
+
+            <div class="question-card">
+
+                <h3>14. Which method selects an HTML element by its ID?</h3>
+
+                <label>
+                    <input type="radio" name="q14" value="getElement">
+                    getElement()
+                </label>
+
+                <label>
+                    <input type="radio" name="q14" value="getElementById">
+                    getElementById()
+                </label>
+
+                <label>
+                    <input type="radio" name="q14" value="selectId">
+                    selectId()
+                </label>
+
+                <label>
+                    <input type="radio" name="q14" value="findId">
+                    findId()
+                </label>
+
+            </div>
+
+
+            <!-- Question 15 -->
+
+            <div class="question-card">
+
+                <h3>15. Which value represents an empty value in JavaScript?</h3>
+
+                <label>
+                    <input type="radio" name="q15" value="empty">
+                    empty
+                </label>
+
+                <label>
+                    <input type="radio" name="q15" value="null">
+                    null
+                </label>
+
+                <label>
+                    <input type="radio" name="q15" value="nothing">
+                    nothing
+                </label>
+
+                <label>
+                    <input type="radio" name="q15" value="blank">
+                    blank
+                </label>
+
+            </div>
+
+
+            <!-- Submit Button -->
+
+            <button  type="button" class="submit-test-btn" onclick="submitTest()" >
+                Submit Test
+            </button>
+
+        </form>
+
+
+        <!-- Result -->
+
+        <div id="result-box" class="result-box">
+
+            <h2>Assessment Completed!</h2>
+
+            <p>
+                Your Score:
+                <strong id="score">0</strong> / 30
+            </p>
+
+            <p id="result-message"></p>
+
+            <a href="javascript.html" class="back-btn">
+                Back to JavaScript Course
+            </a>
+
+        </div>
+
+    </main>
+    <script>
+
+    /* =========================
+       TIMER
+    ========================= */
+
+    let timeLeft = 20 * 60;
+
+    let timerInterval = setInterval(function () {
+
+        let minutes = Math.floor(timeLeft / 60);
+
+        let seconds = timeLeft % 60;
+
+        if (seconds < 10) {
+            seconds = "0" + seconds;
+        }
+
+        document.getElementById("timer").textContent =
+            minutes + ":" + seconds;
+
+        timeLeft--;
+
+        if (timeLeft < 0) {
+
+            clearInterval(timerInterval);
+
+            alert("Time is over!");
+
+            submitTest();
+
+        }
+
+    }, 1000);
+
+
+    /* =========================
+       SUBMIT TEST
+    ========================= */
+
+    function submitTest() {
+
+    clearInterval(timerInterval);
+
+    const answers = {
+        q1: "var",
+        q2: "//",
+        q3: "Boolean",
+        q4: "===",
+        q5: "push",
+        q6: "function",
+        q7: "JSON.parse",
+        q8: "let",
+        q9: "pop",
+        q10: "document",
+        q11: "console.log",
+        q12: "for",
+        q13: "return",
+        q14: "getElementById",
+        q15: "null"
+    };
+
+    const questionConcepts = {
+        q1: "Variables",
+        q2: "Comments",
+        q3: "Data Types",
+        q4: "Operators",
+        q5: "Arrays",
+        q6: "Functions",
+        q7: "JSON",
+        q8: "Variables",
+        q9: "Arrays",
+        q10: "DOM",
+        q11: "Console",
+        q12: "Loops",
+        q13: "Functions",
+        q14: "DOM",
+        q15: "Data Types"
+    };
+
+    let score = 0;
+
+    let concepts = {};
+
+    // Create concept list
+    for (let question in questionConcepts) {
+
+        let concept = questionConcepts[question];
+
+        if (!concepts[concept]) {
+            concepts[concept] = {
+                correct: 0,
+                total: 0
+            };
+        }
+
+        concepts[concept].total++;
+    }
+
+    // Check answers
+    for (let question in answers) {
+
+        let selectedAnswer = document.querySelector(
+            'input[name="' + question + '"]:checked'
+        );
+
+        let concept = questionConcepts[question];
+
+        if (
+            selectedAnswer &&
+            selectedAnswer.value === answers[question]
+        ) {
+            score = score + 2;
+            concepts[concept].correct++;
+        }
+    }
+
+    let strongConcepts = [];
+    let practiceConcepts = [];
+    let weakConcepts = [];
+
+    // Classify concepts
+    for (let concept in concepts) {
+
+        let correct = concepts[concept].correct;
+        let total = concepts[concept].total;
+
+        let percentage = (correct / total) * 100;
+
+        if (percentage === 100) {
+
+            strongConcepts.push(concept);
+
+        } else if (percentage >= 50) {
+
+            practiceConcepts.push(concept);
+
+        } else {
+
+            weakConcepts.push(concept);
+        }
+    }
+
+    // Feedback
+    let feedback = "";
+
+    if (score === 30) {
+
+        feedback =
+            "Excellent! You answered all questions correctly. " +
+            "You have a strong understanding of the JavaScript concepts.";
+
+    } else if (score >= 24) {
+
+        feedback =
+            "Very good performance! You understand most JavaScript concepts. " +
+            "Practice the weak areas to improve further.";
+
+    } else if (score >= 16) {
+
+        feedback =
+            "Good attempt! You understand some JavaScript concepts, " +
+            "but you should practice the weaker areas more.";
+
+    } else {
+
+        feedback =
+            "You need more practice. Focus on the weak concepts " +
+            "and try the assessment again.";
+    }
+
+    // Store result
+    const resultData = {
+
+        score: score,
+
+        totalMarks: 30,
+
+        strongConcepts: strongConcepts,
+
+        weakConcepts: weakConcepts,
+
+        practiceConcepts: practiceConcepts,
+
+        feedback: feedback
+    };
+
+    localStorage.setItem(
+        "resultData",
+        JSON.stringify(resultData)
+    );
+
+    // Open result page
+    window.location.href = "result.html";
+}
+
+</script>
+    
+</body>
+
+</html>

@@ -1,0 +1,395 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript Assessment - AdaptIQ</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            Adapt<span>IQ</span>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+
+            <div class="dropdown">
+
+                <a href="#">Courses ▼</a>
+
+                <div class="dropdown-menu">
+                    <a href="javascript.html">JavaScript Basics</a>
+                    <a href="html.html">HTML</a>
+                    <a href="css.html">CSS</a>
+                </div>
+
+            </div>
+
+            
+            <a href="signin.html">Sign In</a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ================= RESULT SECTION ================= -->
+
+    <main class="result-container">
+
+        <h1>Test Results</h1>
+
+        <p class="subtitle">
+            Here's a summary of your performance
+        </p>
+
+
+        <!-- SCORE CARD -->
+<div class="score-card">
+
+    <h2>Your Score</h2>
+
+    <div class="score">
+        <span id="score">0</span>
+        <span class="total">/ 30</span>
+    </div>
+
+    <p>🎯 Good job! Keep improving.</p>
+
+</div>
+        
+
+
+        <!-- CONCEPTS -->
+
+        <div class="concept-container">
+
+            <!-- STRONG CONCEPTS -->
+
+            <div class="concept-card strong">
+
+                <h2>✓ Strong Concepts</h2>
+
+                <ul id="strongConcepts">
+
+                    <li>Variables</li>
+                    <li>Data Types</li>
+                    <li>Operators</li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- WEAK CONCEPTS -->
+
+            <div class="concept-card weak">
+
+                <h2>⚠ Weak Concepts</h2>
+
+                <ul id="weakConcepts">
+
+                    <li>Functions</li>
+                    <li>Arrays</li>
+                    <li>Objects</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <!-- PERSONALIZED FEEDBACK -->
+
+        <div class="personalized-card">
+
+            <h2>Personalized Feedback</h2>
+
+            <p id="personalizedFeedback">
+
+                You have a good understanding of the basic
+                concepts. Focus more on Functions, Arrays
+                and Objects to improve your performance.
+
+            </p>
+
+        </div>
+
+
+        <!-- CONTINUE LEARNING -->
+
+        <button class="continue-btn"
+            onclick="continueLearning()">
+
+            Continue Learning →
+
+        </button>
+
+    </main>
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    // ==========================================
+    // GET SAVED RESULT
+    // ==========================================
+
+    const savedResult = localStorage.getItem("resultData");
+
+    if (!savedResult) {
+        console.log("No result data found.");
+        return;
+    }
+
+    const resultData = JSON.parse(savedResult);
+
+
+    // ==========================================
+    // GET HTML ELEMENTS
+    // ==========================================
+
+    const scoreElement =
+        document.getElementById("score");
+
+    const strongConceptsElement =
+        document.getElementById("strongConcepts");
+
+    const weakConceptsElement =
+        document.getElementById("weakConcepts");
+
+    const feedbackElement =
+        document.getElementById("personalizedFeedback");
+
+
+    // ==========================================
+    // SCORE
+    // ==========================================
+
+    const score = Number(resultData.score);
+
+    const totalMarks =
+        Number(resultData.totalMarks) || 30;
+
+
+    // Only put the number in the score span
+    // because /30 already exists in HTML.
+
+    scoreElement.textContent = score;
+
+
+    // ==========================================
+    // GET CONCEPT DATA
+    // ==========================================
+
+    let strongConcepts =
+        Array.isArray(resultData.strongConcepts)
+            ? resultData.strongConcepts
+            : [];
+
+    let weakConcepts =
+        Array.isArray(resultData.weakConcepts)
+            ? resultData.weakConcepts
+            : [];
+
+    let practiceConcepts =
+        Array.isArray(resultData.practiceConcepts)
+            ? resultData.practiceConcepts
+            : [];
+
+
+    // ==========================================
+    // FULL MARKS FIX
+    // ==========================================
+
+    if (score === totalMarks) {
+
+        // Full marks means no weak topics
+        weakConcepts = [];
+
+        // No topics need practice
+        practiceConcepts = [];
+
+        // If strong topics were not saved,
+        // show all concepts as strong.
+
+        if (strongConcepts.length === 0) {
+
+            strongConcepts = [
+                "Variables",
+                "Comments",
+                "Data Types",
+                "Operators",
+                "Arrays",
+                "Functions",
+                "JSON",
+                "DOM",
+                "Console",
+                "Loops"
+            ];
+
+        }
+
+    }
+
+
+    // ==========================================
+    // STRONG CONCEPTS
+    // ==========================================
+
+    strongConceptsElement.innerHTML = "";
+
+    if (strongConcepts.length === 0) {
+
+        const item =
+            document.createElement("li");
+
+        item.textContent =
+            "No strong concepts identified.";
+
+        strongConceptsElement.appendChild(item);
+
+    } else {
+
+        strongConcepts.forEach(function (concept) {
+
+            const item =
+                document.createElement("li");
+
+            item.textContent =
+                "✓ " + concept;
+
+            strongConceptsElement.appendChild(item);
+
+        });
+
+    }
+
+
+    // ==========================================
+    // WEAK CONCEPTS
+    // ==========================================
+
+    weakConceptsElement.innerHTML = "";
+
+    if (weakConcepts.length === 0) {
+
+        const item =
+            document.createElement("li");
+
+        item.textContent =
+            "✓ No weak topics";
+
+        weakConceptsElement.appendChild(item);
+
+    } else {
+
+        weakConcepts.forEach(function (concept) {
+
+            const item =
+                document.createElement("li");
+
+            item.textContent =
+                "⚠ " + concept;
+
+            weakConceptsElement.appendChild(item);
+
+        });
+
+    }
+
+
+    // ==========================================
+    // PERSONALIZED FEEDBACK
+    // ==========================================
+
+    if (score === totalMarks) {
+
+        feedbackElement.textContent =
+            "Excellent performance! You answered all " +
+            "questions correctly and demonstrated a strong " +
+            "understanding of the JavaScript concepts. " +
+            "You are ready to move to more advanced topics.";
+
+    }
+
+    else if (score >= 24) {
+
+        feedbackElement.textContent =
+            "Very good performance! You have a strong " +
+            "understanding of JavaScript. Focus on the " +
+            "remaining areas to improve further.";
+
+    }
+
+    else if (score >= 16) {
+
+        if (weakConcepts.length > 0) {
+
+            feedbackElement.textContent =
+                "Good attempt! You understand many concepts. " +
+                "Focus more on " +
+                weakConcepts.join(", ") +
+                " to improve your performance.";
+
+        } else {
+
+            feedbackElement.textContent =
+                "Good attempt! Continue practicing JavaScript " +
+                "to strengthen your understanding.";
+
+        }
+
+    }
+
+    else {
+
+        if (weakConcepts.length > 0) {
+
+            feedbackElement.textContent =
+                "You need more practice. Focus on " +
+                weakConcepts.join(", ") +
+                " and try the assessment again.";
+
+        } else {
+
+            feedbackElement.textContent =
+                "Keep practicing JavaScript fundamentals " +
+                "and try the assessment again.";
+
+        }
+
+    }
+
+});
+
+
+// ==========================================
+// CONTINUE LEARNING
+// ==========================================
+
+function continueLearning() {
+
+    window.location.href = "learning.html";
+
+}
+
+</script>
+
+</body>
+
+</html>
+
